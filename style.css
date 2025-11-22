@@ -1,0 +1,197 @@
+/* =======================
+   ESTILO iOS MODERNO
+======================= */
+:root {
+  --accent: #34c759;
+  --bg: #f2f2f7;
+  --card: #ffffff;
+  --shadow: 0 4px 16px rgba(0,0,0,0.08);
+  --radius: 18px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  background: var(--bg);
+  color: #1c1c1e;
+}
+
+/* HEADER */
+.topbar {
+  padding: 18px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* NAV BOTTOM (iOS) */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: var(--card);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.1);
+  border-radius: 20px 20px 0 0;
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  opacity: .5;
+}
+
+.bottom-nav button.active {
+  opacity: 1;
+  transform: scale(1.2);
+  color: var(--accent);
+}
+
+/* PANELS */
+.container {
+  padding: 20px;
+  padding-bottom: 90px;
+}
+
+.panel {
+  display: none;
+}
+
+.panel.visible {
+  display: block;
+}
+
+/* CARDS */
+.card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 15px;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn.success {
+  background: #30b158;
+  color: white;
+}
+
+.btn.icon {
+  font-size: 24px;
+  padding: 8px 12px;
+}
+
+/* SEARCH */
+.search-box {
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+}
+
+/* SUGERENCIAS */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  padding: 6px 12px;
+  background: #e5e5ea;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* RECYCLE BIN */
+.recycle-bin {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.bin-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  margin:  auto;
+}
+
+/* COLORES POR CATEGORÍA */
+.bin-yellow { background: #ffd60a; }
+.bin-blue { background: #2196f3; }
+.bin-green { background: #2ecc71; }
+.bin-brown { background: #8d6e63; }
+
+/* PERFIL */
+.avatar {
+  width: 60px;
+  height: 60px;
+  background: var(--accent);
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-input {
+  border: none;
+  font-size: 18px;
+  width: 100%;
+  padding: 6px 0;
+  border-bottom: 1px solid #ccc;
+  background: none;
+}
+
+/* LISTAS */
+.list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  h2 { font-size: 20px; }
+  .btn { font-size: 14px; }
+}
+/* ANIMACIÓN PARA CANECA AL APARECER */
+.bin-icon {
+  animation: pop 0.3s ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.4); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* BRILLO DEL COLOR */
+.bin-yellow, .bin-blue, .bin-green, .bin-brown {
+  box-shadow: 0 0 18px rgba(0,0,0,0.15), 0 0 12px currentColor;
+}
